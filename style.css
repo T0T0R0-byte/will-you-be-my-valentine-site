@@ -1,0 +1,141 @@
+:root {
+    --bg-start: #FFF7F5;
+    /* Warm off-white */
+    --bg-end: #FAF3EE;
+    /* Very light beige */
+    --card-bg: #FFFBF2;
+    /* Ivory */
+    --btn-no-bg: #E8DCE2;
+    /* Soft Gray-Pink */
+    --btn-yes-bg: #F7A1C4;
+    /* Blush Pink */
+    --text-color: #2d3436;
+    /* Darker grey for contrast */
+}
+
+body {
+    background: linear-gradient(135deg, var(--bg-start), var(--bg-end));
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+}
+
+.container {
+    background: var(--card-bg);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    /* Softer shadow */
+    max-width: 90%;
+    width: 600px;
+}
+
+#main-image,
+#success-image {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-family: 'Sacramento', cursive;
+    font-size: 3rem;
+    color: #e84393;
+    margin: 0 0 2rem 0;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#yes-btn {
+    background-color: var(--btn-yes-bg);
+    color: white;
+    box-shadow: 0 8px 20px rgba(247, 161, 196, 0.35);
+    /* Soft glow */
+}
+
+#no-btn {
+    background-color: var(--btn-no-bg);
+    color: #6B4E5E;
+    /* Soft dark pink text */
+}
+
+#yes-btn:hover {
+    background-color: #F28AB5;
+    /* Slightly Darker Blush */
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(247, 161, 196, 0.5);
+}
+
+#no-btn:hover {
+    background-color: #DCCED6;
+    /* Darker Gray-Pink */
+}
+
+#go-back-btn {
+    background-color: #74b9ff;
+    /* Default blue for now, or match theme if desired */
+    color: white;
+    margin-top: 20px;
+    padding: 10px 20px;
+    /* Reduced padding */
+    font-size: 1rem;
+    /* Reduced font size */
+}
+
+#go-back-btn:hover {
+    background-color: #0984e3;
+    transform: none;
+    /* Keep it simpler */
+    box-shadow: none;
+}
+
+
+
+.hidden {
+    display: none;
+}
+
+/* Success specific */
+.success-text {
+    color: #d63031;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 1.5rem;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
